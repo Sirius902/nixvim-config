@@ -4,6 +4,11 @@
   plugins = {
     lualine.enable = true;
 
+    indent-blankline = {
+      enable = true;
+      settings.scope.enabled = false;
+    };
+
     lsp = {
       enable = true;
       servers = {
