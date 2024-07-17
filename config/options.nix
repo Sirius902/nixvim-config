@@ -1,4 +1,6 @@
 {
+  # TODO: Remove leader key timeout or add which-key.
+
   globals.mapleader = " ";
   globals.maplocalleader = " ";
 
