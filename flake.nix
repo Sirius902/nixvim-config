@@ -20,8 +20,7 @@
         "aarch64-darwin"
       ];
 
-      perSystem =
-        { pkgs, system, ... }:
+      perSystem = { pkgs, system, ... }:
         let
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
@@ -36,7 +35,7 @@
           nvim = nixvim'.makeNixvimWithModule nixvimModule;
         in
         {
-          formatter = nixpkgs.legacyPackages.${system}.nixpkgs-fmt;
+          formatter = pkgs.nixpkgs-fmt;
 
           checks = {
             # Run `nix flake check .` to verify that your config is not broken
