@@ -124,6 +124,9 @@
     cmp_luasnip.enable = true; # Enable suggestions for code snippets
     cmp-cmdline.enable = false; # Enable autocomplete for command line
 
+    luasnip.enable = true;
+    friendly-snippets.enable = true;
+
     treesitter = {
       enable = true;
       nixvimInjections = true;
@@ -150,6 +153,8 @@
 
     # Useful status updates for LSP
     fidget.enable = true;
+
+    headlines.enable = true;
 
     # Adds git related signs to the gutter, as well as utilities for managing changes
     gitsigns = {
@@ -230,9 +235,7 @@
   };
 
   extraPlugins = with pkgs.vimPlugins; [
-    headlines-nvim # Should load this in at the opening of filetypes that require this, namely Markdown.
     nvim-web-devicons # Should load this in at Telescope/Neotree actions.
-    friendly-snippets # Should load this in at LuaSnip's initialisation.
     vim-rhubarb # Git related plugins
     neodev-nvim # Additional lua configuration, makes nvim stuff amazing!
   ];
